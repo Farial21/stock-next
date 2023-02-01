@@ -9,7 +9,7 @@ export default function AboutPage() {
     </Head>
     <h1>About Page</h1>
     <p>About Farial</p> 
-    <Link href= '/index'>Home</Link> 
+    <Link href= '/'>Home</Link> 
      
     </>
   )

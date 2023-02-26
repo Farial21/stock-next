@@ -5,7 +5,8 @@ import { useEffect, useState } from 'react'
 export default function Home({ products }) {
 
   function deleteProduct(id) {
-    fetch(`http://localhost:3000/api/stock/products/${id}`,
+    // fetch(`http://localhost:3000/api/stock/products/${id}`,
+    fetch(`/api/stock/products/${id}`,
       {
         method: 'DELETE'
       })
@@ -49,7 +50,8 @@ export default function Home({ products }) {
   )
 }
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/stock/products/`)
+  // const res = await fetch(`http://localhost:3000/api/stock/products/`)
+  const res = await fetch(`/api/stock/products/`)
   const products = await res.json()
 
   return { props: { products } }
